@@ -2,6 +2,7 @@
 
 - name: Deploy a Web Application
   hosts: remote
+  become: yes
   roles:
     - python
     - mysqldb

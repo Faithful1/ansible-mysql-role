@@ -3,7 +3,7 @@
   - name: Install Database
     apt: 
       name: "{{ item }}"
-      state: absent
+      state: present
     with_items:
       - mysql-server
       - mysql-client
@@ -11,13 +11,13 @@
   - name: Start MySQL Service
     service:
       name: mysql
-      state: stopped
+      state: started
       enabled: yes
 
   - name: Create Application Database
     mysql_db:
       name: "{{ db_name }}"
-      state: absent
+      state: present
 
   - name: Create Application DB User
     mysql_user: 
@@ -25,4 +25,4 @@
       password: "{{ db_password }}" 
       priv: '*.*:ALL' 
       host: '%' 
-      state: absent
+      state: present
