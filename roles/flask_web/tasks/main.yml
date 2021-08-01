@@ -1,7 +1,9 @@
+---
+# tasks file for flask_web
 - name: Install Python Flask dependencies
   pip:
     name: "{{ item }}"
-    state: present
+    state: absent
   with_items:
     - flask
     - flask-mysql

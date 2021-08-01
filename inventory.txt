@@ -2,8 +2,8 @@
 localhost ansible_connection=local
 
 [remote]
-app_server1 ansible_host=54.254.5.30 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/devops/.ssh/jaden.pem
-app_server2 ansible_host=54.169.69.120 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/devops/.ssh/jaden.pem
+app_server ansible_host=54.254.5.30 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/devops/.ssh/jaden.pem
+db_server ansible_host=54.169.69.120 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=/home/devops/.ssh/jaden.pem
 
 [containers]
 target1 ansible_host=172.17.0.2 ansible_connection=ssh ansible_user=root ansible_ssh_pass=Passw0rd
